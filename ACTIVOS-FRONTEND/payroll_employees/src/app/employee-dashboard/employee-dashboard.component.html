@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Employee Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+        <div class="d-flex">        
+          <button class="btn btn-success" type="submit"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add Employee</button>
+        </div>
+      </div>
+  </nav>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Lastname</th>
+        <th>Email Id</th>
+        <th>Salary</th>
+        <th>Position</th>
+        <th>State</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let employee of allemployee">
+        <td>{{employee.id}}</td>
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.emailId}}</td>
+        <td>{{employee.salary}}</td>
+        <td>{{employee.position}}</td>
+        <td>{{employee.state}}</td>
+        <td>
+            <input type="button" value="Edit" (click)="EditEmployee(employee)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success me-2"/>
+            <input type="button" value="Delete" (click)="DeleteEmployee(employee)" class="btn btn-danger"/>
+        </td>
+    </tr>
+</tbody>
+</table>
+
+
+
+
+<!-- Button trigger modal -->
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form class="row g-3" [formGroup]="formValue">
+                <div class="col-md-6">
+                    <label for="inputFirstName" class="form-label">Employee Name</label>
+                    <input type="text" formControlName="firstName" class="form-control" id="inputFirstName">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputLastName" class="form-label">Lastname</label>
+                    <input type="text" formControlName="lastName" class="form-control" id="inputLastName">
+                  </div>
+                <div class="col-md-6">
+                  <label for="inputEmailId4" class="form-label">Email</label>
+                  <input type="email" formControlName="emailId" class="form-control" id="inputEmailId4">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputSalary4" class="form-label">Salary</label>
+                  <input type="text" formControlName="salary" class="form-control" id="inputSalary4">
+                </div>
+                <div class="col-12">
+                  <label for="inputState" class="form-label">State</label>
+                  <select class="form-control" formControlName="state" id="inputState">
+                    <option value="" disabled>Select state</option>
+                    <option *ngFor="let state of allstate" [value]="state.id">{{ state.description }}</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="inputPosition" class="form-label">Position</label>
+                  <select class="form-control" formControlName="position" id="inputPosition">
+                    <option value="" disabled>Select position</option>
+                    <option *ngFor="let pos of allposition" [value]="pos.id">{{ pos.charge }}</option>
+                  </select>
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning"  data-bs-dismiss="modal">Close</button>
+          <button *ngIf="btnSaveShow" type="button" class="btn btn-primary" (click)="AddEmployee()" >Register</button>
+          <button *ngIf="btnUpdateShow" type="button" class="btn btn-primary" (click)="UpdateEmployee()" >Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
