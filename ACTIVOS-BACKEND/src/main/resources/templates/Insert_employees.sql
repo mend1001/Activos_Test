@@ -1,0 +1,10 @@
+INSERT INTO `payroll`.`employees` (`email_id`, `first_name`, `last_name`, `pos_position`, `salary`, `sta_state`) VALUES ('diana-caro@gmail.ocm', 'Diana Carolina', 'Fuentes Segura', '3', '5600000', '1');
+INSERT INTO `payroll`.`employees` (`email_id`, `first_name`, `last_name`, `pos_position`, `salary`, `sta_state`) VALUES ('santi-pe@gmail.ocm', 'Santiago', 'Peña', '3', '2600000', '1');
+INSERT INTO `payroll`.`employees` (`email_id`, `first_name`, `last_name`, `pos_position`, `salary`, `sta_state`) VALUES ('ana-caro@gmail.ocm', 'Ana Lina', 'Puentes', '3', '1700000', '1');
+INSERT INTO `payroll`.`employees` (`email_id`, `first_name`, `last_name`, `pos_position`, `salary`, `sta_state`) VALUES ('carlos@gmail.ocm', 'Carlos', 'Segura', '3', '900000', '1');
+INSERT INTO `payroll`.`employees` (`email_id`, `first_name`, `last_name`, `pos_position`, `salary`, `sta_state`) VALUES ('ddavidff@gmail.ocm', 'David', 'Farias', '3', '1100000', '1');
+INSERT INTO `payroll`.`employees` (`email_id`, `first_name`, `last_name`, `pos_position`, `salary`, `sta_state`) VALUES ('gomesa@gmail.ocm', 'Antoniio', 'Gomez', '3', '1000000', '1');
+INSERT INTO `payroll`.`employees` (`email_id`, `first_name`, `last_name`, `pos_position`, `salary`, `sta_state`) VALUES ('unad@gmail.ocm', 'Uberney', 'Diaz', '3', '5600000', '1');
+INSERT INTO `payroll`.`employees` (`email_id`, `first_name`, `last_name`, `pos_position`, `salary`, `sta_state`) VALUES ('yukio@gmail.ocm', 'Karen', 'Arismendy', '3', '5600000', '1');
+INSERT INTO `payroll`.`employees` (`email_id`, `first_name`, `last_name`, `pos_position`, `salary`, `sta_state`) VALUES ('dianam@gmail.ocm', 'Diana Marcela', 'martinez', '3', '1400000', '1');
+SELECT * FROM payroll.employees;
