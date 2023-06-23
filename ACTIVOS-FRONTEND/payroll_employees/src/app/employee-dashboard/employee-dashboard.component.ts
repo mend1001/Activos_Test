@@ -41,7 +41,8 @@ export class EmployeeDashboardComponent implements OnInit {
   }
 
   AddEmployee(){
-
+    this.AllState();
+    this.AllPosition();
     this.employeeobj.firstName = this.formValue.value.firstName;
     this.employeeobj.lastName = this.formValue.value.lastName;
     this.employeeobj.emailId = this.formValue.value.emailId;

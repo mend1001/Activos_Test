@@ -50,6 +50,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         if (employeeDetails.getSalary() != null) {
             updateEmployee.setSalary(employeeDetails.getSalary());
         }
+        if (employeeDetails.getPosition() != null) {
+            updateEmployee.setPosition(employeeDetails.getState());
+        }
         if (employeeDetails.getState() != null) {
             updateEmployee.setState(employeeDetails.getState());
         }
